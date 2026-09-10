@@ -1,4 +1,118 @@
-<!DOCTYPE html>
+<!-- === Início da Secção Hero com Fundo de Mosaico (Doramash e Futebol) === -->
+<style>
+    /* Estilos específicos para esta secção de fundo */
+    .seccao-hero-mosaico {
+        position: relative; /* Necessário para posicionar o overlay */
+        width: 100%;
+        min-height: 80vh; /* Altura da secção: 80% da altura da janela do navegador */
+        
+        /* === CONFIGURAÇÃO DA IMAGEM DE FUNDO === */
+        background-image: url('fundo-mosaico.jpg'); /* O nome exato da imagem que subiu */
+        background-size: cover; /* Faz a imagem cobrir todo o espaço */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat;
+        
+        /* Centralização do conteúdo */
+        display: flex;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        
+        /* Padding para não encostar nas bordas em telemóveis */
+        padding: 40px 20px;
+        box-sizing: border-box;
+        font-family: sans-serif; /* Use a fonte do seu site aqui */
+    }
+
+    /* === O SEGREDO: SOBREPOSIÇÃO ESCURA (OVERLAY) === */
+    /* Esta camada fica entre a imagem e o texto para dar contraste */
+    .seccao-hero-mosaico::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Cor preta com 70% de opacidade. Aumente o 0.7 para escurecer mais */
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 1; /* Fica atrás do texto */
+    }
+
+    /* Contentor do texto - Garante que ele fique acima do overlay */
+    .conteudo-hero {
+        position: relative;
+        z-index: 2; /* Fica acima da camada escura */
+        text-align: center; /* Alinha o texto ao centro */
+        max-width: 800px; /* Limita a largura para melhor leitura */
+        color: #ffffff; /* Cor padrão do texto (branco) */
+    }
+
+    /* Estilo do Título Principal (H1) */
+    .conteudo-hero h1 {
+        font-size: 2.5rem; /* Tamanho grande */
+        font-weight: bold;
+        text-transform: uppercase; /* Letras maiúsculas */
+        margin-bottom: 20px;
+        line-height: 1.2;
+        /* Sombra suave no texto para um extra de legibilidade */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+
+    /* Estilo do Texto Descritivo (P) */
+    .conteudo-hero p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        opacity: 0.95; /* Ligeira transparência para suavizar */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Estilo do Botão (CTA) */
+    .botao-cta-hero {
+        display: inline-block;
+        padding: 15px 35px;
+        background-color: #ffc107; /* Cor amarela para destaque */
+        color: #000000; /* Texto do botão preto */
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .botao-cta-hero:hover {
+        background-color: #e0a800; /* Amarelo mais escuro ao passar o rato */
+        transform: scale(1.05); /* Ligeiro aumento no hover */
+    }
+
+    /* === RESPONSIVIDADE (PARA TELEMÓVEIS) === */
+    @media (max-width: 768px) {
+        .conteudo-hero h1 {
+            font-size: 1.8rem; /* Diminui o título em ecrãs pequenos */
+        }
+        .conteudo-hero p {
+            font-size: 1rem; /* Diminui o texto em ecrãs pequenos */
+        }
+        .seccao-hero-mosaico {
+            min-height: 60vh; /* Diminui a altura em telemóveis */
+        }
+    }
+</style>
+
+<header class="seccao-hero-mosaico">
+    <div class="conteudo-hero">
+        <!-- Título -->
+        <h1>Estabilidade & Qualidade Garantida<br>
+            Televisão e Entretenimento sem Interrupções</h1>
+
+        <!-- Texto -->
+        <p>Viva a emoção do futebol ao vivo e não perca nenhum episódio das suas séries e doramas favoritos.
+           Acesso completo a canais e conteúdos diretamente na sua Smart TV, telemóvel ou computador com qualidade HD/4K.</p>
+
+        <!-- Botão de Ação -->
+        <a href="#planos" class="botao-cta-hero">Pedir Teste Grátis</a>
+    </div>
+</header>
+<!-- === Fim da Secção Hero === --><!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
