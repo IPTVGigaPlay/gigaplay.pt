@@ -254,101 +254,50 @@
         }
 
         /* PLANOS */
-        .grid-planos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-        }
+       .preco-duplo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+    font-weight: bold;
+}
 
-        .card-plano {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
+.preco-eur {
+    font-size: 1.4rem;
+    color: #00d26a;
+}
 
-        .card-plano.popular {
-            border-color: var(--accent-blue);
-            box-shadow: var(--shadow-md);
-        }
+.preco-brl {
+    font-size: 1.2rem;
+    color: #3b82f6;
+}
 
-        .tag-popular {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: var(--accent-blue);
-            color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 12px;
-            text-transform: uppercase;
-        }
+.divisor {
+    color: #555;
+}
 
-        .plano-nome {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
+.acoes-pagamento {
+    margin-top: 15px;
+}
 
-        .plano-preco {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 4px;
-        }
+.btn-checkout {
+    display: block;
+    padding: 14px;
+    border-radius: 6px;
+    background-color: #635bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-        .plano-preco span {
-            font-size: 14px;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .plano-recursos {
-            list-style: none;
-            margin: 24px 0;
-            flex-grow: 1;
-        }
-
-        .plano-recursos li {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .plano-recursos li::before {
-            content: "✓";
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
-
-        .btn-plano {
-            background: var(--bg-main);
-            color: var(--text-dark);
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            text-align: center;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-
-        .card-plano.popular .btn-plano,
-        .btn-plano:hover {
-            background: var(--accent-blue);
-            color: #fff;
-            border-color: var(--accent-blue);
-        }
-
+.btn-checkout:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
         /* APLICATIVOS COMPATÍVEIS */
         .grid-apps {
             display: grid;
